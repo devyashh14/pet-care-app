@@ -1,0 +1,115 @@
+.login-page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./dog-bg.png') no-repeat center center/cover;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: #f9f9f9;
+}
+
+.input-field:focus {
+  border-color: #fda085;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(253, 160, 133, 0.2);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.register-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.register-link span {
+  color: #ff758c;
+  font-weight: 600;
+}
+
+.register-link:hover {
+  color: #ff758c;
+}

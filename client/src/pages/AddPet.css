@@ -1,0 +1,138 @@
+/* Full-page background wrapper */
+.add-pet-page-wrapper {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    /* Shift content down for transparent navbar */
+    padding-top: 80px;
+    box-sizing: border-box;
+    background: url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2000&auto=format&fit=crop") no-repeat center center/cover;
+}
+
+.add-pet-page-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Form Container */
+.left-panel {
+    flex: 1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px 80px 20px;
+    min-height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.left-panel h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Right panel styles removed */
+
+/* Form Card Styling (Modified from previous) */
+.add-pet-card {
+    background: rgba(255, 255, 255, 0.15);
+    /* Highly transparent, over 50% visibility */
+    backdrop-filter: blur(10px);
+    /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow against dark background */
+    z-index: 10;
+    /* Keep form clickable */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    /* Translucent input background */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.emoji-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    user-select: none;
+}
+
+.form-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: 500;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #4a4a4a;
+    font-weight: 400;
+}
+
+.btn-submit-pet {
+    width: 100%;
+    background-color: #6a7385;
+    /* Match the panel color */
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-submit-pet:hover {
+    background-color: #555d6b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive constraints */
+@media (max-width: 960px) {
+    .add-pet-page-wrapper {
+        flex-direction: column;
+    }
+}

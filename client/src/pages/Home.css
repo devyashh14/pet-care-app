@@ -1,0 +1,133 @@
+.hero-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 80px;
+    background: linear-gradient(135deg, #fff9f6 0%, #fef1e5 100%);
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: #ff758c;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-hero-primary {
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 117, 140, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 117, 140, 0.4);
+}
+
+.btn-hero-secondary {
+    background: white;
+    color: #ff758c;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #ff758c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-secondary:hover {
+    background: #fff0f3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 117, 140, 0.1);
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+}
