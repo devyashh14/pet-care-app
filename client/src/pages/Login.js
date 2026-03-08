@@ -44,7 +44,8 @@ function Login() {
 
         console.log(err);
 
-        alert("Invalid login");
+        const errorMessage = err.response?.data?.message || "Invalid login";
+        alert(errorMessage);
 
       });
 

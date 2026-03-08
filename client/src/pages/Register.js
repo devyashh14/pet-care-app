@@ -26,7 +26,8 @@ function Register() {
         navigate("/login");
       })
       .catch(err => {
-        alert("Error registering user");
+        const errorMessage = err.response?.data?.message || "Error registering user";
+        alert(errorMessage);
         console.error(err);
       });
   };
