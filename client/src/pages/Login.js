@@ -23,7 +23,7 @@ function Login() {
 
     e.preventDefault();
 
-    axios.post("http://localhost:8000/api/auth/login", user)
+    axios.post(`http://${window.location.hostname}:8000/api/auth/login`, user)
 
       .then(res => {
 

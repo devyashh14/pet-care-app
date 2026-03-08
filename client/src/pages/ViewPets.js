@@ -12,7 +12,7 @@ function ViewPets() {
 
   useEffect(() => {
 
-    axios.get("http://localhost:8000/api/pets/all", {
+    axios.get(`http://${window.location.hostname}:8000/api/pets/all`, {
       headers: {
         Authorization: token
       }
@@ -50,7 +50,7 @@ function ViewPets() {
     if (!window.confirm("Are you sure you want to delete this pet?")) return;
 
     axios.delete(
-      `http://localhost:8000/api/pets/delete/${id}`,
+      `http://${window.location.hostname}:8000/api/pets/delete/${id}`,
       {
         headers: {
           Authorization: token

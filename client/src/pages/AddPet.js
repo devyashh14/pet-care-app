@@ -24,7 +24,7 @@ function AddPet() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:8000/api/pets/add", pet, {
+    axios.post(`http://${window.location.hostname}:8000/api/pets/add`, pet, {
       headers: {
         Authorization: localStorage.getItem("token")
       }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "r
 import "./App.css";
 
 import Navbar from "./components/Navbar";
+import PrivateRoute from "./components/PrivateRoute";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -14,7 +15,7 @@ import EditPet from "./pages/EditPet";
 
 // Inner component to access router location
 function AppContent() {
-  const token = localStorage.getItem("token");
+  // We no longer read token here since PrivateRoute handles it per-route
   const location = useLocation();
 
   // Hide navbar on login and register pages
@@ -27,7 +28,11 @@ function AppContent() {
         {/* HOME ROUTE */}
         <Route
           path="/"
-          element={token ? <Home /> : <Navigate to="/login" />}
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
         />
 
         {/* AUTH ROUTES */}
@@ -37,15 +42,27 @@ function AppContent() {
         {/* PROTECTED ROUTES */}
         <Route
           path="/add-pet"
-          element={token ? <AddPet /> : <Navigate to="/login" />}
+          element={
+            <PrivateRoute>
+              <AddPet />
+            </PrivateRoute>
+          }
         />
         <Route
           path="/pets"
-          element={token ? <ViewPets /> : <Navigate to="/login" />}
+          element={
+            <PrivateRoute>
+              <ViewPets />
+            </PrivateRoute>
+          }
         />
         <Route
           path="/edit/:id"
-          element={token ? <EditPet /> : <Navigate to="/login" />}
+          element={
+            <PrivateRoute>
+              <EditPet />
+            </PrivateRoute>
+          }
         />
 
         {/* PUBLIC PET VIEW (for pet sitter) */}

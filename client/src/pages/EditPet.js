@@ -23,7 +23,7 @@ function EditPet() {
   useEffect(() => {
 
     axios.get(
-      `http://localhost:8000/api/pets/${id}`,
+      `http://${window.location.hostname}:8000/api/pets/${id}`,
       {
         headers: {
           Authorization: token
@@ -53,7 +53,7 @@ function EditPet() {
     e.preventDefault();
 
     axios.put(
-      `http://localhost:8000/api/pets/update/${id}`,
+      `http://${window.location.hostname}:8000/api/pets/update/${id}`,
       pet,
       {
         headers: {
