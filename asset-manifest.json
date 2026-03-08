@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/pet-care-app/static/css/main.c2b4e078.css",
-    "main.js": "/pet-care-app/static/js/main.4258205f.js",
+    "main.js": "/pet-care-app/static/js/main.a086de4b.js",
     "static/js/453.af205ec6.chunk.js": "/pet-care-app/static/js/453.af205ec6.chunk.js",
     "static/media/dog-bg.png": "/pet-care-app/static/media/dog-bg.dfff717bdb3e1d1debf0.png",
     "index.html": "/pet-care-app/index.html",
     "main.c2b4e078.css.map": "/pet-care-app/static/css/main.c2b4e078.css.map",
-    "main.4258205f.js.map": "/pet-care-app/static/js/main.4258205f.js.map",
+    "main.a086de4b.js.map": "/pet-care-app/static/js/main.a086de4b.js.map",
     "453.af205ec6.chunk.js.map": "/pet-care-app/static/js/453.af205ec6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2b4e078.css",
-    "static/js/main.4258205f.js"
+    "static/js/main.a086de4b.js"
   ]
 }
