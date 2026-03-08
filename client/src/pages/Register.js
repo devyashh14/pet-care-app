@@ -20,7 +20,7 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("https://petcare-backend-7hnc.onrender.com/api/auth/register", user)
+    axios.post("http://localhost:8000/api/auth/register", user)
       .then(res => {
         alert("Registration successful!");
         navigate("/login");

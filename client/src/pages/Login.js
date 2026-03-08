@@ -23,7 +23,7 @@ function Login() {
 
     e.preventDefault();
 
-    axios.post("https://petcare-backend-7hnc.onrender.com/api/auth/login", user)
+    axios.post("http://localhost:8000/api/auth/login", user)
 
       .then(res => {
 

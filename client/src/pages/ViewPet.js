@@ -10,7 +10,7 @@ function ViewPet() {
 
     useEffect(() => {
 
-        const apiUrl = `https://petcare-backend-7hnc.onrender.com/api/pets/view/${id}`;
+        const apiUrl = `http://localhost:8000/api/pets/view/${id}`;
 
         axios
             .get(apiUrl)

@@ -24,14 +24,11 @@ function AddPet() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(
-      "https://petcare-backend-7hnc.onrender.com/api/pets/add",
-      pet,
-      {
-        headers: {
-          Authorization: localStorage.getItem("token")
-        }
+    axios.post("http://localhost:8000/api/pets/add", pet, {
+      headers: {
+        Authorization: localStorage.getItem("token")
       }
+    }
     )
       .then(() => {
         alert("Pet Added!");

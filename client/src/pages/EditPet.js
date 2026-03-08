@@ -23,7 +23,7 @@ function EditPet() {
   useEffect(() => {
 
     axios.get(
-      `https://petcare-backend-7hnc.onrender.com/api/pets/${id}`,
+      `http://localhost:8000/api/pets/${id}`,
       {
         headers: {
           Authorization: token
@@ -53,7 +53,7 @@ function EditPet() {
     e.preventDefault();
 
     axios.put(
-      `https://petcare-backend-7hnc.onrender.com/api/pets/update/${id}`,
+      `http://localhost:8000/api/pets/update/${id}`,
       pet,
       {
         headers: {
